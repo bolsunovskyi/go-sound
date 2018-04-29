@@ -6,8 +6,9 @@ import (
 	"os/signal"
 	"time"
 
+	"log"
+
 	"github.com/bolsunovskyi/go-sound"
-	"github.com/prometheus/common/log"
 )
 
 func exit(c chan os.Signal) {
