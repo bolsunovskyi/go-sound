@@ -15,6 +15,11 @@ func MakeTracks() *Tracks {
 	}
 }
 
+func (t *Tracks) HasTrack(name string) bool {
+	_, ok := t.items[name]
+	return ok
+}
+
 func (t *Tracks) AddMultipleTracks(namePath ...string) error {
 	if len(namePath)%2 != 0 {
 		return errors.New("wrong params number")
